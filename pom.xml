@@ -12,12 +12,14 @@
     </properties>
 
     <dependencies>
+        <!-- hadoop core -->
         <dependency>
             <groupId>org.apache.hadoop</groupId>
             <artifactId>hadoop-core</artifactId>
             <version>1.0.4</version>
             <scope>compile</scope>
         </dependency>
+        <!-- hbase -->
         <dependency>
             <groupId>org.apache.hbase</groupId>
             <artifactId>hbase</artifactId>
@@ -29,17 +31,25 @@
                 </exclusion>
             </exclusions>
         </dependency>
+        <!-- hive -->
         <dependency>
             <groupId>org.apache.hive</groupId>
             <artifactId>hive-jdbc</artifactId>
             <version>0.10.0-cdh4.6.0</version>
         </dependency>
-        <!-- Spark dependency -->
+        <!-- spark -->
         <dependency>
             <groupId>org.apache.spark</groupId>
             <artifactId>spark-core_2.10</artifactId>
             <version>0.9.0-incubating</version>
         </dependency>
+        <!-- elasticsearch -->
+        <dependency>
+            <groupId>org.elasticsearch</groupId>
+            <artifactId>elasticsearch-hadoop</artifactId>
+            <version>1.3.0.M3</version>
+        </dependency>
+        <!-- junit -->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
