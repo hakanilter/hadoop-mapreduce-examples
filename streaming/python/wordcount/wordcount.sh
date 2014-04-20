@@ -1,4 +1,5 @@
 #!/bin/sh
+
 HADOOP_HOME=/usr/java/hadoop
 INPUT=$1
 OUTPUT=$2

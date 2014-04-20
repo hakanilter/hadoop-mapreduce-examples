@@ -1,7 +1,5 @@
-package com.devveri.hive.jdbc.test;
+package com.devveri.hive;
 
-import org.junit.Ignore;
-import org.junit.Test;
 import java.sql.*;
 
 /**
@@ -9,15 +7,13 @@ import java.sql.*;
  * Date: 21/02/14
  * Time: 13:49
  */
-@Ignore
-public class HiveJdbcTest {
+public class HiveJdbcExample {
 
     private static final String JDBC_DRIVER = "org.apache.hive.jdbc.HiveDriver";
     private static final String JDBC_URL = "jdbc:hive2://myhost:10000/test";
     private static final String JDBC_USER = "";
     private static final String JDBC_PASS = "";
 
-    @Test
     public void test() throws ClassNotFoundException, SQLException {
         // load class
         Class.forName(JDBC_DRIVER);
@@ -46,6 +42,10 @@ public class HiveJdbcTest {
                 con.close();
             }
         }
+    }
+
+    public static void main(String[] args) throws SQLException, ClassNotFoundException {
+        new HiveJdbcExample().test();
     }
 
 }

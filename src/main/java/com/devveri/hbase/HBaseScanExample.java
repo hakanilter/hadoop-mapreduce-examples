@@ -1,10 +1,9 @@
-package com.devveri.hbase.test;
+package com.devveri.hbase;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.hbase.HBaseConfiguration;
 import org.apache.hadoop.hbase.client.*;
 import org.apache.hadoop.hbase.util.Bytes;
-import org.junit.Test;
 
 import java.io.IOException;
 
@@ -13,12 +12,11 @@ import java.io.IOException;
  * Date: 21/02/14
  * Time: 16:53
  */
-public class HBaseConnectionTest {
+public class HBaseScanExample {
 
     private static final String ZOOKEEPER_QUORUM = "zkhost1,zkhost2,zkhost3";
     private static final String ZOOKEEPER_PORT = "2181";
 
-    @Test
     public void test() throws IOException {
         // configuration
         Configuration config = HBaseConfiguration.create();
@@ -33,7 +31,7 @@ public class HBaseConnectionTest {
             table = connection.getTable("categories");
 
             byte[] family = Bytes.toBytes("c");
-            byte[] qualifier = Bytes.toBytes("ktgr_adi");
+            byte[] qualifier = Bytes.toBytes("name");
 
             Scan scan = new Scan();
             scan.setBatch(1000);
@@ -45,7 +43,6 @@ public class HBaseConnectionTest {
                 String value = new String(valueObj);
                 System.out.println(value);
             }
-
         } finally {
             if (table != null) {
                 table.close();
@@ -54,6 +51,10 @@ public class HBaseConnectionTest {
                 connection.close();
             }
         }
+    }
+
+    public static void main(String[] args) throws IOException {
+        new HBaseScanExample().test();
     }
 
 }
