@@ -28,7 +28,7 @@ public class HBaseScanExample {
         HTableInterface table = null;
         try {
             connection = HConnectionManager.createConnection(config);
-            table = connection.getTable("categories");
+            table = connection.getTable("test");
 
             byte[] family = Bytes.toBytes("c");
             byte[] qualifier = Bytes.toBytes("name");

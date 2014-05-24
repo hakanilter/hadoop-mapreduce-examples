@@ -45,6 +45,13 @@
             <artifactId>spark-core_2.10</artifactId>
             <version>0.9.1</version>
         </dependency>
+        <!-- storm -->
+        <dependency>
+            <groupId>storm</groupId>
+            <artifactId>storm</artifactId>
+            <version>0.9.0</version>
+            <scope>test</scope>
+        </dependency>
         <!-- elasticsearch -->
         <dependency>
             <groupId>org.elasticsearch</groupId>
@@ -139,6 +146,11 @@
         <repository>
             <id>Akka repository</id>
             <url>http://repo.akka.io/releases</url>
+        </repository>
+        <!-- storm -->
+        <repository>
+            <id>clojars.org</id>
+            <url>http://clojars.org/repo</url>
         </repository>
     </repositories>
 

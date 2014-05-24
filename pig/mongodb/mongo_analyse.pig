@@ -1,6 +1,6 @@
-REGISTER /tmp/udfs/mongo-hadoop-core_2.2.0-1.2.0.jar
-REGISTER /tmp/udfs/mongo-hadoop-pig_2.2.0-1.2.0.jar
-REGISTER /tmp/udfs/mongo-java-driver-2.11.1.jar
+REGISTER mongo-hadoop-core_2.2.0-1.2.0.jar
+REGISTER mongo-hadoop-pig_2.2.0-1.2.0.jar
+REGISTER mongo-java-driver-2.11.1.jar
 set default_parallel 1
 
 DEFINE MongoLoader com.mongodb.hadoop.pig.MongoLoader;
