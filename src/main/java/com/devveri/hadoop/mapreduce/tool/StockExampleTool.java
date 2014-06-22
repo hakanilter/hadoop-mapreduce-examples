@@ -64,7 +64,6 @@ public class StockExampleTool extends Configured implements Tool {
 
             // use only valid lines
             if (!line.startsWith("NYSE")) {
-                context.getCounter("Statistics", "Skipped Line").increment(1L);
                 return;
             }
 
