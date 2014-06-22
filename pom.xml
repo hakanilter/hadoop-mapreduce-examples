@@ -62,6 +62,10 @@
                     <groupId>cascading</groupId>
                     <artifactId>cascading-hadoop</artifactId>
                 </exclusion>
+                <exclusion>
+                    <groupId>cascading</groupId>
+                    <artifactId>cascading-local</artifactId>
+                </exclusion>
             </exclusions>
             <scope>compile</scope>
         </dependency>
